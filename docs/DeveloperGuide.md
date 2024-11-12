@@ -220,7 +220,7 @@ Note: While the diagram shows the lifeline of objects even after their deletion,
 2. KonTActs will create a contact of Tom with the given details before adding it to the contact list.
 3. The contact is then displayed in the UI, along with a success message.
 
-### Add Grade implementation
+### Add Grade
 
 **Logic**: 
 1. `AddGradeCommand.java`
@@ -254,7 +254,7 @@ This is illustrated in the activity diagram below:
 
 ---
 
-### Command History implementation
+### Command History
 **API** : [`CommandHistory.java`](https://github.com/AY2425S1-CS2103T-T11-2/tp/blob/master/src/main/java/seedu/address/storage/CommandHistory.java)
 
 The `CommandHistory` is used by KonTActs to allow users to navigate and retrieve previous inputted commands. It follows a singleton pattern where only a single instance can be created.
