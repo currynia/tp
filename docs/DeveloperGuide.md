@@ -200,7 +200,7 @@ The `add` command allows user to add students' contact into KonTActs.
 
 The Sequence Diagram below shows how the logic component handles the user input.
 
-<puml src="diagrams/AddSequenceDiagram.puml" width="650"/>
+<puml src="diagrams/AddSequenceDiagram.puml" width="550"/>
 
 Note: While the diagram shows the lifeline of objects even after their deletion, this is a limitattion of plantUML.
 
@@ -263,9 +263,13 @@ The `CommandHistory` is used by KonTActs to allow users to navigate and retrieve
 - The `ArrayList` is destroyed at the end of the program and a new one will be created at the start of every session of KonTActs.
 - An `index` points to the current command displayed in the command box of the Graphical user interface (GUI).
 
+When a user enters a command,
+1. If an existing `CommandHistory` instance already exists, then the command will be added to it
+2. Else, a new `CommandHistory` instance will be instantiated and the command will be added to it
+
 This is illustrated in the activity diagram below:
 <center>
-<puml src="diagrams/commandHistoryActivityDiagram.puml" width="550" />
+<puml src="diagrams/commandHistoryActivityDiagram.puml" width="450" />
 </center>
 
 When a user retrieves a command that was previously executed using <kbd>↑</kbd> or <kbd>↓</kbd>,
